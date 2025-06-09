@@ -49,10 +49,7 @@
 npm --version</code></pre>
 
 <h3>Instalasi</h3>
-<p>Ada dua cara untuk menyiapkan proyek ini: menggunakan skrip otomatis atau secara manual.</p>
-
-<h4>1. Menggunakan Skrip Setup Otomatis (Direkomendasikan)</h4>
-<p>Skrip <code>setup.sh</code> akan mengotomatiskan seluruh proses instalasi dependensi dan pembuatan struktur file.</p>
+<p>Cara termudah adalah menggunakan skrip `setup.sh` yang sudah disertakan.</p>
 <ol>
   <li>Berikan izin eksekusi pada skrip:
     <pre><code>chmod +x setup.sh</code></pre>
@@ -61,38 +58,11 @@ npm --version</code></pre>
     <pre><code>./setup.sh</code></pre>
   </li>
 </ol>
-<p>Skrip akan membuat direktori <code>mons-project-manager/</code> dan melakukan semua penyiapan yang diperlukan di dalamnya.</p>
-
-<h4>2. Instalasi Manual</h4>
-<p>Jika Anda tidak dapat menggunakan skrip atau lebih suka melakukannya secara manual:</p>
-<ol>
-  <li><strong>Buat proyek Next.js baru:</strong>
-    <pre><code>npx create-next-app@latest mons-project-manager --typescript --tailwind --eslint --app --src-dir=false --import-alias="@/*"
-cd mons-project-manager</code></pre>
-  </li>
-  <li><strong>Instal semua dependensi:</strong>
-    <pre><code>npm install @dnd-kit/core @dnd-kit/sortable @dnd-kit/utilities @radix-ui/react-dialog @radix-ui/react-dropdown-menu @radix-ui/react-select @radix-ui/react-tabs @radix-ui/react-switch @radix-ui/react-avatar @radix-ui/react-alert-dialog @radix-ui/react-separator lucide-react class-variance-authority clsx tailwind-merge @neondatabase/serverless
-npm install -D @types/node</code></pre>
-  </li>
-  <li><strong>Inisialisasi dan tambahkan komponen shadcn/ui:</strong>
-    <pre><code>npx shadcn-ui@latest init
-npx shadcn-ui@latest add button input textarea card badge dialog dropdown-menu select tabs switch avatar alert-dialog separator</code></pre>
-  </li>
-</ol>
 
 <h3>Langkah Terakhir: Salin Kode Sumber</h3>
 <blockquote>
-  <p><strong>PENTING</strong>: Salin semua file dan folder dari kode sumber <code>v0</code> Anda ke dalam direktori proyek <code>mons-project-manager/</code> yang baru dibuat, sesuai dengan struktur foldernya (<code>app/</code>, <code>components/</code>, <code>lib/</code>).</p>
+  <p><strong>PENTING</strong>: Setelah menjalankan skrip setup, salin semua file dan folder dari kode sumber aplikasi Anda ke dalam direktori proyek yang baru dibuat, sesuai dengan struktur foldernya (<code>app/</code>, <code>components/</code>, <code>lib/</code>).</p>
 </blockquote>
-
-<h3>Konfigurasi Variabel Lingkungan (Opsional)</h3>
-<p>Aplikasi ini dapat berjalan tanpa file <code>.env</code>. Namun, jika Anda ingin menghubungkannya ke database Neon:</p>
-<ol>
-  <li>Buat salinan dari file <code>.env.local.example</code>:
-    <pre><code>cp .env.local.example .env.local</code></pre>
-  </li>
-  <li>Buka file <code>.env.local</code> dan isi <code>NEON_DATABASE_URL</code> dengan URL koneksi database Anda.</li>
-</ol>
 
 <h2>💻 Penggunaan</h2>
 <p>Setelah instalasi selesai dan kode sumber telah disalin, jalankan server pengembangan:</p>
@@ -105,23 +75,9 @@ npx shadcn-ui@latest add button input textarea card badge dialog dropdown-menu s
   <li><strong>Email</strong>: <code>alice@example.com</code> | <strong>Password</strong>: <code>password123</code></li>
   <li><strong>Email</strong>: <code>bob@example.com</code> | <strong>Password</strong>: <code>password123</code></li>
 </ul>
-<p>Atau, klik <strong>"Continue with Google"</strong> untuk mencoba alur otentikasi Google (dalam mode demo).</p>
-
-<h2>🔧 Pengaturan VSCode (Direkomendasikan)</h2>
-<p>Untuk pengalaman pengembangan terbaik, instal ekstensi VSCode berikut:</p>
-<ul>
-  <li><code>bradlc.vscode-tailwindcss</code></li>
-  <li><code>ms-vscode.vscode-typescript-next</code></li>
-  <li><code>esbenp.prettier-vscode</code> (atur sebagai formatter default)</li>
-  <li><code>ms-vscode.vscode-eslint</code></li>
-  <li><code>formulahendry.auto-rename-tag</code></li>
-  <li><code>christian-kohler.path-intellisense</code></li>
-</ul>
-<p>Skrip <code>setup.sh</code> secara otomatis membuat file <code>.vscode/settings.json</code> dengan konfigurasi yang direkomendasikan.</p>
 
 <h2>🤝 Berkontribusi</h2>
-<p>Kontribusi membuat komunitas open source menjadi tempat yang luar biasa untuk belajar, menginspirasi, dan berkreasi. Setiap kontribusi yang Anda buat sangat kami hargai.</p>
-<p>Jika Anda memiliki saran untuk perbaikan, silakan <em>fork</em> repositori ini dan buat <em>pull request</em>. Anda juga bisa membuka <em>issue</em> dengan tag "enhancement". Jangan lupa untuk memberikan bintang pada proyek ini! Terima kasih sekali lagi!</p>
+<p>Kontribusi sangat kami hargai. Jika Anda memiliki saran untuk perbaikan, silakan fork repositori ini dan buat pull request.</p>
 <ol>
   <li>Fork Proyek ini</li>
   <li>Buat Branch Fitur Anda (<code>git checkout -b feature/AmazingFeature</code>)</li>
@@ -131,8 +87,8 @@ npx shadcn-ui@latest add button input textarea card badge dialog dropdown-menu s
 </ol>
 
 <h2>📄 Lisensi</h2>
-<p>Didistribusikan di bawah Lisensi MIT. Lihat <code>LICENSE.txt</code> untuk informasi lebih lanjut.</p>
+<p>Didistribusikan di bawah Lisensi MIT. Anda disarankan untuk membuat file `LICENSE.txt` di root proyek dan mengisi dengan teks lisensi MIT.</p>
 
 <h2>📧 Kontak</h2>
-<p>Nama Anda – <a href="https://twitter.com/akun_twitter">@akun_twitter</a> – email@example.com</p>
-<p>Tautan Proyek: <a href="https://github.com/username/mons-project-manager">https://github.com/username/mons-project-manager</a></p>
+<p>YatoTech – <a href="https://instagram.com/console_loststring">@console_loststring</a> (Instagram)</p>
+<p>Tautan Proyek: <a href="https://github.com/YatoTech/mons-project-manager">https://github.com/YatoTech/mons-project-manager</a></p>
